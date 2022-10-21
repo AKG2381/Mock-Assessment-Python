@@ -15,7 +15,7 @@
 # 
 # ###### A single line containing a sorted list.
 
-# In[1]:
+# In[1]: Method 1
 
 
 def Question1(l):
@@ -37,8 +37,14 @@ print(m)
 Question1(m)
 
 
-# In[ ]:
-
-
-
+# In[2]: Method 2
+def Question1(lst):
+        lst.sort(key=lambda x: (x[-2]))
+        return lst
+n=int(input())
+s=input()
+t=s.split()
+m=t[:n]
+print(m)
+Question1(m)
 
