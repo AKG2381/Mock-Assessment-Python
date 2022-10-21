@@ -19,17 +19,22 @@
 
 
 def Question1(l):
-    t=[]
-    d=[i[-2] for i in l]
-    d.sort()
-    for i in range(len(d)):
-        for j in range(len(l)):
-            if d[i]==l[j][-2]:
-                t.append(l[j])
-    return t
+    l1=[]
+    for i in range(len(l)):
+        for j in range(len(l)-1):
+            if l[j][-2]<l[j+1][-2]:
+                pass
+            else:
+                l1=l[j]
+                l[j]=l[j+1]
+                l[j+1]=l1
+    return l
 n=int(input())
-s=[input() for i in range(n)]
-Question1(s)
+s=input()
+t=s.split()
+m=t[:n]
+print(m)
+Question1(m)
 
 
 # In[ ]:
